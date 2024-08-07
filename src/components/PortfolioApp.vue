@@ -10,7 +10,7 @@ const posts = ref<Post[]>([]);
 // Function to fetch data from posts.json
 const fetchPosts = async () => {
   try {
-    const response = await fetch('/data/posts.json')
+    const response = await fetch('/portfolio/data/posts.json')
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
