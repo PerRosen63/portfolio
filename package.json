@@ -8,6 +8,7 @@
     "build": "vite build",
     "fetch-data": "npm run build:node && node dist/fetchData.cjs",
     "build:node": "npx tsc -p tsconfig.build.json && echo 'Node build complete' && node rename-js-to-cjs.cjs && dir dist",
+    "build:prod": "cross-env NODE_ENV=production npm run build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
@@ -28,6 +29,7 @@
     "@types/node": "^20.14.9",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/tsconfig": "^0.5.1",
+    "cross-env": "^7.0.3",
     "npm-run-all2": "^6.2.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "~5.4.0",

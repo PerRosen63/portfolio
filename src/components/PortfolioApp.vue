@@ -10,7 +10,8 @@ const posts = ref<Post[]>([]);
 // Function to fetch data from posts.json
 const fetchPosts = async () => {
   try {
-    const response = await fetch('/portfolio/data/posts.json')
+    const basePath = import.meta.env.BASE_URL;
+    const response = await fetch(`${basePath}data/posts.json`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }

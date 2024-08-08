@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "ESNext",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -22,7 +22,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/shims-vue.d.ts"
+    "src/shims-vue.d.ts",
+    "src/env.d.ts"
   ],
   "exclude": ["node_modules"]
 }

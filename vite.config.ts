@@ -3,9 +3,14 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
-// https://vitejs.dev/config/
+// Log the NODE_ENV variable
+console.log("NODE_ENV:", process.env.NODE_ENV);
+
+const base = process.env.NODE_ENV === "production" ? "/portfolio/" : "/";
+console.log("Base URL:", base);
+
 export default defineConfig({
-  base: "/portfolio/",
+  base,
   plugins: [vue()],
   optimizeDeps: {
     include: ["cross-fetch"],
