@@ -8,3 +8,17 @@ export interface Post {
     startYear: number;
   };
 }
+
+export interface Page {
+  content: string;
+  featuredImage: {
+    node: {
+      sourceUrl: string;
+      altText: string;
+      mediaDetails: {
+        width: number;
+        height: number;
+      };
+    };
+  } | null; // Use | null if featuredImage might be missing
+}

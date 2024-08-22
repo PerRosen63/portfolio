@@ -9,6 +9,7 @@
     "fetch-data": "npm run build:node && node dist/fetchData.cjs",
     "build:node": "npx tsc -p tsconfig.build.json && echo 'Node build complete' && node rename-js-to-cjs.cjs && dir dist",
     "build:prod": "cross-env NODE_ENV=production npm run build",
+    "build:prod:windows": "set NODE_ENV=production&& npm run build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
@@ -16,6 +17,7 @@
   "dependencies": {
     "@apollo/client": "^3.10.6",
     "@vue/apollo-composable": "^4.0.2",
+    "axios": "^1.3.1",
     "cross-fetch": "^4.0.0",
     "fs-extra": "^10.0.0",
     "graphql": "^16.9.0",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
+    "@types/axios": "^0.14.0",
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^20.14.9",
     "@vitejs/plugin-vue": "^5.0.5",
